@@ -8,7 +8,7 @@ $words = [
 
 $word = $words[array_rand($words)];
 $letters = str_split($word);
-$correctWord = str_split(str_repeat('-', strlen($word)));
+$correctWord = str_split(str_repeat('_', strlen($word)));
 
 echo implode('', $correctWord);
 echo PHP_EOL;
@@ -18,9 +18,9 @@ $maxGueses = strlen($word) + 3;
 
 
 
-while ($gueses < $maxGueses && in_array('-', $correctWord))
+while ($gueses < $maxGueses && in_array('_', $correctWord))
 {
-    $letter = readline('Enter letter: ');
+    $letter = readline('Word: ');
     echo PHP_EOL;
     $miss = [];
     $letterPosition = array_keys($letters, $letter);
@@ -42,7 +42,7 @@ while ($gueses < $maxGueses && in_array('-', $correctWord))
 
 
 var_dump($miss);
-echo in_array('-', $correctWord) ? 'You lose' : 'You win!';
+echo in_array('_', $correctWord) ? 'You lose' : 'You win!';
 echo PHP_EOL;
 
 echo PHP_EOL;
