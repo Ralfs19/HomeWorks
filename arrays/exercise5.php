@@ -39,6 +39,7 @@ $playerA = "X";
 $playerB = "O";
 $currentPlayer = $playerA;
 
+// Ongoing game
 while (true){
     $userChoise = readline("\n '{$currentPlayer}', Choose your location (row, column) (include space between)");
     [$x, $y] = explode(' ', $userChoise);
@@ -77,9 +78,15 @@ while (true){
         }
     }
 
+    if ($turns === 9){
+        echo 'Tie!';
+        exit;
+    }
+
     // Change player turns
     $currentPlayer = $currentPlayer === $playerA ? $playerB : $playerA;
 
+    $turns++;
 }
 
 
