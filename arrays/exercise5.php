@@ -17,8 +17,3 @@ $columns = [$firstColumn, $secondColumn, $thirdColumn];
 var_dump($columns[0]);
 
 
-
-
-
-
-
