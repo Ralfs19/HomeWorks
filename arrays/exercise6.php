@@ -34,6 +34,10 @@ while ($gueses < $maxGueses && in_array('_', $correctWord))
 
 
 
+
+
+
+
     echo  implode('', $correctWord);
     echo PHP_EOL;
 
