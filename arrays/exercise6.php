@@ -16,8 +16,6 @@ echo PHP_EOL;
 $gueses = 0;
 $maxGueses = strlen($word) + 3;
 
-
-
 while ($gueses < $maxGueses && in_array('_', $correctWord))
 {
     $letter = readline('Word: ');
@@ -25,27 +23,17 @@ while ($gueses < $maxGueses && in_array('_', $correctWord))
     $miss = [];
     $letterPosition = array_keys($letters, $letter);
 
-
     if(count($letterPosition) > 0){
         foreach ($letterPosition as $position){
             $correctWord[$position] = $letter;
         }
     }
 
-
-
-
-
-
-
     echo  implode('', $correctWord);
     echo PHP_EOL;
 
 }
 
-
-
-var_dump($miss);
 echo in_array('_', $correctWord) ? 'You lose' : 'You win!';
 echo PHP_EOL;
 
