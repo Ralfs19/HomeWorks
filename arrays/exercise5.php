@@ -38,9 +38,11 @@ $totalTurns = 0;
 $playerA = "X";
 $playerB = "O";
 $currentPlayer = $playerA;
+$turns = 0;
 
 // Ongoing game
 while (true){
+    $turns++;
     $userChoise = readline("\n '{$currentPlayer}', Choose your location (row, column) (include space between)");
     [$x, $y] = explode(' ', $userChoise);
 
@@ -86,7 +88,7 @@ while (true){
     // Change player turns
     $currentPlayer = $currentPlayer === $playerA ? $playerB : $playerA;
 
-    $turns++;
+
 }
 
 
