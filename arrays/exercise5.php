@@ -18,11 +18,7 @@ var_dump($columns[0]);
 
 
 
-if ($player)
 
-for ($i = 0; $i < 3; $i++) {
 
-    echo $firsRow[0][$i] . ' | ' . $secondRow[0][$i] . ' | ' . $thirdRow[0][$i];
-    echo PHP_EOL;
-}
+
 
